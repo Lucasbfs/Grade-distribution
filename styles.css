@@ -1,0 +1,24 @@
+#distributionTable{
+    width: 50%;
+    margin: 0 auto;
+    color: white;
+    border: whitesmoke solid 2px;
+    border-radius: 10%;
+    padding: 3%;
+}
+body{
+    background-color: black;
+}
+
+h1{
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    color: rgb(14, 14, 141);
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
