@@ -1,4 +1,3 @@
-
 function parseScores(scoresString) {
    return scoresString.split(" ");  //Return parsing 
 }  
@@ -51,18 +50,18 @@ function setTableContent(userInput) {
          <td><div style="height:20px" class="bar4"></div></td>
       </tr> 
       <tr>
-         <td>A</td>
-         <td>B</td>
-         <td>C</td>
-         <td>D</td>
-         <td>F</td>
+         <td style="text-align: center;">A</td>
+         <td style="text-align: center;">B</td>
+         <td style="text-align: center;">C</td>
+         <td style="text-align: center;">D</td>
+         <td style="text-align: center;">F</td>
       </tr>
       <tr>
-         <td class="grade"></td>
-         <td class="grade"></td>
-         <td class="grade"></td>
-         <td class="grade"></td>
-         <td class="grade"></td>
+         <td style="text-align: center;" class="grade"></td>
+         <td style="text-align: center;" class="grade"></td>
+         <td style="text-align: center;" class="grade"></td>
+         <td style="text-align: center;" class="grade"></td>
+         <td style="text-align: center;" class="grade"></td>
       </tr>`;
 
    var j = 0;
@@ -79,5 +78,15 @@ function setTableContent(userInput) {
 }
 
 // The argument can be changed for testing purposes
+// setTableContent("45 78 98 83 86 99 90 59 100 200 50 30 20 25 60 65 500 1000"); 
 
-setTableContent("45 78 98 83 86 99 90 59 100 200 50 30 20 25 60 65 500 1000");   
+function bodyLoaded(input){
+   setTableContent(input);
+}
+
+function fn1(){
+   event.preventDefault();
+   const str = document.getElementById('scores-input').value;
+   // alert("Value inside the text box is: "+str);
+   bodyLoaded(str);
+}
